@@ -1,0 +1,40 @@
+{
+  "name": "@esmj/speakable",
+  "version": "0.0.35",
+  "type": "module",
+  "main": "dist/index",
+  "module": "dist/index",
+  "unpkg": "dist/index.umd.cjs",
+  "sideEffects": false,
+  "scripts": {
+    "lint:cmd": "eslint -c ./.eslintrc.cjs --ignore-path ./.prettierignore  --no-eslintrc",
+    "lint": "npm run lint:cmd -- './src/**/*.{mjs,cjs,js,jsx}'",
+    "lint:fix": "npm run lint -- --fix",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@merkur/core": "^0.30.0",
+    "@merkur/integration": "^0.31.1",
+    "@merkur/plugin-component": "^0.30.0",
+    "@merkur/plugin-event-emitter": "^0.30.0",
+    "classnames": "^2.3.2",
+    "core-js": "^3.30.2",
+    "preact": "^10.13.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jasmine": "^4.1.3",
+    "eslint-plugin-jest": "^26.1.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "@preact/preset-vite": "^2.5.0",
+    "vite": "^4.2.0"
+  }
+}
