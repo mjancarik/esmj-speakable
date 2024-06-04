@@ -76,7 +76,7 @@ function audioAPI() {
     createAudioSource(widget) {
       if (typeof MediaSource === 'undefined') {
         widget.$external.audio.src =
-          'https://unpkg.com/@esmj/speakable@latest/dist/silence-6s.mp3';
+          'https://unpkg.com/@esmj/speakable@latest/public/silence-6s.mp3';
         return;
       }
 

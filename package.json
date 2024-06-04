@@ -1,40 +1,47 @@
 {
-  "name": "@esmj/speakable",
-  "version": "0.0.35",
-  "type": "module",
-  "main": "dist/index",
-  "module": "dist/index",
-  "unpkg": "dist/index.umd.cjs",
-  "sideEffects": false,
+  "name": "esmj-speakable",
+  "version": "0.0.1",
+  "description": "",
   "scripts": {
-    "lint:cmd": "eslint -c ./.eslintrc.cjs --ignore-path ./.prettierignore  --no-eslintrc",
-    "lint": "npm run lint:cmd -- './src/**/*.{mjs,cjs,js,jsx}'",
-    "lint:fix": "npm run lint -- --fix",
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "test": "npm run test:all",
+    "test:unit": "cross-env TEST_GROUP='unit' merkur test",
+    "test:integration": "cross-env TEST_GROUP='integration' merkur test",
+    "test:all": "npm run build && cross-env TEST_GROUP='all' merkur test",
+    "test:watch": "cross-env TEST_GROUP='unit' merkur test --watchAll",
+    "lint": "eslint -c ./.eslintrc.js --ignore-path ./.prettierignore './**/*.{js,jsx}'",
+    "dev": "merkur dev",
+    "build": "merkur build",
+    "start": "merkur start"
   },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "@merkur/core": "^0.30.0",
-    "@merkur/integration": "^0.31.1",
-    "@merkur/plugin-component": "^0.30.0",
-    "@merkur/plugin-event-emitter": "^0.30.0",
-    "classnames": "^2.3.2",
-    "core-js": "^3.30.2",
-    "preact": "^10.13.0"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
+    "@merkur/cli": "0.36.3",
+    "@merkur/core": "0.36.0",
+    "@merkur/integration": "0.36.0",
+    "@merkur/integration-custom-element": "^0.36.3",
+    "@merkur/plugin-component": "0.36.0",
+    "@merkur/plugin-error": "0.36.0",
+    "@merkur/plugin-event-emitter": "0.36.0",
+    "@merkur/preact": "0.36.0",
+    "compression": "^1.7.4",
+    "config": "^3.3.7",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "express": "^4.17.3",
+    "express-static-gzip": "^2.1.5",
+    "helmet": "^5.0.2",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "eslint": "^8.13.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-jasmine": "^4.1.3",
-    "eslint-plugin-jest": "^26.1.4",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.29.4",
-    "@preact/preset-vite": "^2.5.0",
-    "vite": "^4.2.0"
+    "@merkur/tools": "0.36.0",
+    "enzyme": "3.11.0",
+    "enzyme-adapter-preact-pure": "4.1.0",
+    "enzyme-to-json": "3.6.2",
+    "esbuild-jest": "^0.5.0",
+    "identity-obj-proxy": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   }
 }

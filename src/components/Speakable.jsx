@@ -1,4 +1,5 @@
 import { useCallback } from 'preact/hooks';
+
 import { context } from './context';
 import { COMMANDS } from '../plugins/speech';
 
@@ -36,7 +37,7 @@ function Player({ widget }) {
   };
 
   const playButton = {
-    backgroundColor: 'forestgreen',
+    backgroundColor: 'green',
     color: 'white',
     fontSize: '24px',
   };
@@ -187,7 +188,7 @@ function Player({ widget }) {
   );
 }
 
-export function Speakable({ widget }) {
+export function Speakable(widget) {
   const style = {
     margin: '8px',
     padding: '8px 12px',
