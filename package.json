@@ -1,6 +1,6 @@
 {
   "name": "@esmj/speakable",
-  "version": "0.0.37",
+  "version": "0.0.38",
   "description": "",
   "scripts": {
     "test": "npm run test:all",
