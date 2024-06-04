@@ -1,6 +1,6 @@
 {
   "name": "esmj-speakable",
-  "version": "0.0.1",
+  "version": "0.0.35",
   "description": "",
   "scripts": {
     "test": "npm run test:all",
@@ -15,6 +15,10 @@
   },
   "author": "",
   "license": "ISC",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "dependencies": {
     "@merkur/cli": "0.36.3",
     "@merkur/core": "0.36.0",
