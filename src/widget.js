@@ -14,8 +14,10 @@ import { speechPlugin } from './plugins/speech';
 import './style.css';
 import { name, version } from '../package.json';
 
+customElementName = name.replace('@', '').replace('/', '-');
+
 const widgetDefinition = defineWidget({
-  name,
+  name: customElementName,
   version,
   viewFactory: createViewFactory((widget) => ({
     View: Speakable,
